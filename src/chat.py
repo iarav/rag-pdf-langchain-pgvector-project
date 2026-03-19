@@ -19,7 +19,11 @@ def main():
 
         try:
             answer = search_prompt(question)
-            print(f"RESPOSTA: {answer}")
+            
+            if not answer:
+                print("Desculpe, não consegui encontrar uma resposta para sua pergunta.")
+            else:
+                print(f"RESPOSTA: {answer}")
         except Exception as exc:
             print(f"Erro ao processar pergunta: {exc}")
 
